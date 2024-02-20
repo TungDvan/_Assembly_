@@ -97,7 +97,7 @@
 
             - Số bị nhân nằm trong thanh ghi `al` và số nhân là một byte trong bộ nhớ hoặc trong một thanh ghi khác. Sản phẩm có mã `ax`. 8 bit **bậc cao** của sản phẩm được lưu trữ trong `ah` và 8 bit **bậc thấp** được lưu trữ trong `al`.
 
-                ![alt text](image-4.png)
+                ![alt text](IMG/image-4.png)
 
         - **TH2: Khi hai giá trị word được nhân lên**
 
@@ -105,13 +105,13 @@
 
             - Sản phẩm kết quả là một `doubleword`, sẽ cần hai thanh ghi. Phần thứ tự cao (ngoài cùng bên trái) được lưu trữ trong `dx` và phần thứ tự thấp hơn (ngoài cùng bên phải) được lưu trữ trong `ax`.
 
-                ![alt text](image-5.png)
+                ![alt text](IMG/image-5.png)
 
         - **TH3: Khi hai giá trị doubleword được nhân lên**
 
             - Khi nhân hai giá trị từ kép, số bị nhân phải ở trong `eax` và số nhân là giá trị từ kép được lưu trong bộ nhớ hoặc trong một thanh ghi khác. Sản phẩm được tạo ra được lưu trữ trong các thanh ghi `edx:eax`, tức là 32 bit bậc cao được lưu trong thanh ghi `edx` và 32 bit bậc thấp được lưu trong thanh ghi `eax`.
 
-                ![alt text](image-6.png)
+                ![alt text](IMG/image-6.png)
 
 
 ## Lệnh DIV/IDIV
@@ -134,16 +134,16 @@
 
             - Số bị chia được giả định nằm trong thanh ghi `ax` (`16` bit). Sau khi chia, thương sẽ vào thanh ghi `al`, số dư sẽ vào thanh ghi `ah`.
 
-                ![alt text](image-7.png)
+                ![alt text](IMG/image-7.png)
 
         - **TH2: Khi số chia là một word**
 
             - Số bị chia được giả định là dài `32` bit và nằm trong các thanh ghi `dx:ax`. `16` bit bậc cao nằm trong `dx` và 16 bit bậc thấp nằm trong `ax`. Sau khi chia, thương số `16` bit sẽ chuyển đến thanh ghi `ax` và phần còn lại `16` bit sẽ chuyển đến thanh ghi `dx`.
 
-                ![alt text](image-8.png)
+                ![alt text](IMG/image-8.png)
 
         - **TH3: Khi số chia là một doubleword**
 
             - Số bị chia được giả định là dài `64` bit và nằm trong các thanh ghi `edx:eax`. `32` bit bậc cao nằm trong `edx` và 32 bit bậc thấp nằm trong `eax`. Sau khi chia, thương số `32` bit sẽ chuyển vào thanh ghi `eax` và phần còn lại `32` bit sẽ chuyển vào thanh ghi `edx`.
 
-                ![alt text](image-9.png)
+                ![alt text](IMG/image-9.png)

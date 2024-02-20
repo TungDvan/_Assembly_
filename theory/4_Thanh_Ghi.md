@@ -30,7 +30,7 @@
 
     - Nửa dưới và nửa trên của bốn thanh ghi 16 bit nêu trên có thể được sử dụng làm tám thanh ghi dữ liệu 8 bit: `AH`, `AL`, `BH`, `BL`, `CH`, `CL`, `DH` và `DL`.
 
-        ![alt text](image-1.png)
+        ![alt text](IMG/image-1.png)
 
 - Một số thanh ghi dữ liệu này có công dụng cụ thể trong các phép tính số học:
 
@@ -52,7 +52,7 @@
 
         - **Con trỏ cơ sở** `BP` - Thanh ghi `BP` 16 bit chủ yếu giúp tham chiếu các biến tham số được truyền cho chương trình con. Địa chỉ trong thanh ghi `SS` được kết hợp với **offset** trong `BP` để lấy vị trí của tham số. `BP` cũng có thể được kết hợp với `DI` và `SI` làm thanh ghi cơ sở cho việc đánh địa chỉ đặc biệt.
 
-            ![alt text](image-2.png)
+            ![alt text](IMG/image-2.png)
 
 ## **Index registers** (thanh ghi mục lục)
 
@@ -62,7 +62,7 @@
 
     - **Chỉ mục đích** `DI`: Nó được sử dụng làm chỉ mục đích cho các hoạt động chuỗi.
 
-        ![alt text](image-3.png)
+        ![alt text](IMG/image-3.png)
 
 ## **Control registers, and** (thanh ghi điều khiển)
 

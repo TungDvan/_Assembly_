@@ -161,7 +161,7 @@
 
 - Bộ xử lý lưu trữ dữ liệu theo chuỗi byte ngược, nghĩa là một byte thứ tự thấp được lưu trữ ở địa chỉ bộ nhớ thấp và một byte thứ tự cao được lưu trữ ở địa chỉ bộ nhớ cao. Vì vậy, nếu bộ xử lý mang giá trị 0725H từ thanh ghi vào bộ nhớ, nó sẽ chuyển 25 đầu tiên đến địa chỉ bộ nhớ thấp hơn và 07 đến địa chỉ bộ nhớ tiếp theo.
 
-    ![alt text](image.png)
+    ![alt text](IMG/image.png)
 
 - Khi bộ xử lý lấy dữ liệu số từ bộ nhớ để đăng ký, nó lại đảo ngược các byte. Có hai loại địa chỉ bộ nhớ
     ```
