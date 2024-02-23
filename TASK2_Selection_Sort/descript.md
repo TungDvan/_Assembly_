@@ -18,11 +18,11 @@
 
 ### Khởi tạo biến number, mảng lưu chuỗi, mảng lưu giá trị
 
-    ```asm
-    number dd 0                 ; Number
-    string times 20 db '', 0    ; String
-    arr times 300 dd '', 0      ; Array
-    ```
+```asm
+number dd 0                 ; Number
+string times 20 db '', 0    ; String
+arr times 300 dd '', 0      ; Array
+```
 
 - Chúng ta cần phải biết cần lưu những cái gì vào từng biến. Ví dụ: 
 
