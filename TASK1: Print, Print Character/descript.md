@@ -126,6 +126,8 @@ step2:
     jmp step1
 ```
 
+![alt text](IMG/DEMO_Print_Character.PNG)
+
 - Với bài này thì tui sẽ giải quyết với ý tưởng là sẽ so sánh từng giá trị trong chuỗi xem có thoả mãn với yêu cầu và thực hiện in lun kí tự đó. Việc đầu tiên cần là đọc chuỗi từ bàn phím nhập vào và thực hiện lưu chiều dài của chuỗi vào biến `len3`:
 ```asm
 
