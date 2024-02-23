@@ -137,3 +137,69 @@ ret
 - Một điều lưu ý khác khi ta xử dụng `div`, mỗi vòng lặp chúng ta cần phải làm sạch thanh `edx`, bởi vì khi khi chia cho 4 byte thì sẽ là thanh `edx:eax` với `edx` là bit cao, nếu chúng ta không làm sạch thanh `edx` sau mỗi vòng lặp thì thanh `edx` đang lưu giá trị số dư của vòng lặp trước và nó tính là bit cao của một số khác
 
 
+### Selection Sort
+
+- Code C rùi đẩy vào các thanh ghi theo từng biến 
+
+- Code C (hơi dài dòng để phù hợp với việc chuyển sang ASM)
+
+```
+    for (int i = 0; i < n; i++){
+        int tmp = i;
+        int tmp2 = a[tmp]
+        for (int j = i + 1; j < n; j++){
+            if (a[j] < tmp2) {
+                tmp = j;
+                tmp2 = a[tmp];
+            }
+        }
+
+        int tmp3 = a[i];
+        a[i] = tmp2;
+        a[tmp] = tmp3
+    }
+```
+
+- Code ASM
+
+```asm
+_selection_Sort:
+    xor eax, eax    ; i
+    xor ebx, ebx    ; j
+    xor ecx, ecx    ;tmp1
+    xor edx, edx    ;tmp2
+    xor ebp, ebp    ;tmp3
+    xor esi, esi
+
+    ForI:
+        cmp eax, [n]
+        jge step7       ; neu i >= n --> END
+        mov ecx, eax    ; tmp = i    
+        mov edx, [arr + eax * 4]    ; tmp2 = a[tmp]
+
+        add eax, 0x1            ;
+        mov ebx, eax            ; j = i + 1
+        sub eax, 0x1            ;
+        
+        ForJ:
+            cmp ebx, [n]        ; 
+            jge step8          ; neu j >= n --> thoat vong J
+            cmp edx, [arr + ebx * 4]
+            jle step9           ; neu tmp2 <= a[j] --> tiep tuc vong J
+            mov ecx, ebx
+            mov edx, [arr + 4 * ecx]
+            step9:
+                add ebx, 0x1
+                jmp ForJ
+
+    step8:
+        mov ebp, [arr + 4 * eax]
+        mov [arr + 4 * eax], edx
+        mov [arr + 4 * ecx], ebp    
+        add eax, 0x1
+        jmp ForI
+
+
+    step7:
+ret
+```
