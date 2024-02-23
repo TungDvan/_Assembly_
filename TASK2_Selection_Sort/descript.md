@@ -10,7 +10,7 @@
 
 - Về cấu trúc của bài toán thì chương trình chúng ta sẽ được thực thi như sau:
 
-    ![alt text](IMG/selection_sort.png)
+    ![alt text](IMG/selection_sort.PNG)
 
 - Nhìn qua sơ đồ thì chắc chúng ta sẽ biết cần phải trang bị những gì cho chương trình, chắc chắn sẽ phải có một hàm in mảng, một hàm sort. Vấn đề cốt lõi của bài toán này là vấn đề xử lý **string to number** và **number to string** .
 
